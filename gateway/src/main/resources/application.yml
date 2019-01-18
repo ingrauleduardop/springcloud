@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: gateway-service  
+  cloud:
+    gateway:
+      routes:
+      - id: usuarios
+        uri: http://10.156.156.139:8080/authentication/vi/usuarios
+        predicates:
+        - Path=/usuario
